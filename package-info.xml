@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "https://www.simplemachines.org/xml/package-info">
+<package-info xmlns="https://www.simplemachines.org/xml/package-info" xmlns:smf="https://www.simplemachines.org/">
+    <id>bettersmf:better-portal</id>
+    <name>Better Portal</name>
+    <version>0.1.0</version>
+    <type>modification</type>
+
+    <install for="2.1 - 2.1.99">
+        <require-file name="Sources/BetterPortal.php" destination="$sourcedir" />
+        <require-file name="Themes/default/BetterPortal.template.php" destination="$themedir" />
+        <require-file name="Themes/default/BetterPortalAdmin.template.php" destination="$themedir" />
+        <require-file name="Themes/default/languages/BetterPortal.english.php" destination="$languagedir" />
+        <require-file name="Themes/default/css/better_portal.css" destination="$themedir/css" />
+        <require-file name="Themes/default/images/better_portal_dev32g.png" destination="$themes_dir/default/images" />
+        <require-file name="Themes/default/images/better_portal_dev32l.png" destination="$themes_dir/default/images" />
+        <require-file name="Themes/default/images/admin/better_portal_dev32g.png" destination="$themes_dir/default/images/admin" />
+        <require-file name="Themes/default/images/admin/big/better_portal_dev32g.png" destination="$themes_dir/default/images/admin/big" />
+        <database>better_portal_database.php</database>
+        <code>better_portal_install.php</code>
+    </install>
+
+    <upgrade for="2.1 - 2.1.99" from="0.1.0-dev1,0.1.0-dev2,0.1.0-dev2a,0.1.0-dev3,0.1.0-dev3a,0.1.0-dev3b,0.1.0-dev4,0.1.0-dev5,0.1.0-dev6,0.1.0-dev7,0.1.0-dev8,0.1.0-dev9,0.1.0-dev10,0.1.0-dev11,0.1.0-dev12,0.1.0-dev13,0.1.0-dev14,0.1.0-dev14a,0.1.0-dev14b,0.1.0-dev14c,0.1.0-dev15,0.1.0-dev16,0.1.0-dev17,0.1.0-dev18,0.1.0-dev19,0.1.0-dev19a,0.1.0-dev19b,0.1.0-dev20,0.1.0-dev21,0.1.0-dev22,0.1.0-dev22a,0.1.0-dev22b,0.1.0-dev23,0.1.0-dev24,0.1.0-dev24a,0.1.0-dev24b,0.1.0-dev24c,0.1.0-dev24d,0.1.0-dev25,0.1.0-dev26,0.1.0-dev26a,0.1.0-dev26b,0.1.0-dev27,0.1.0-dev28,0.1.0-dev28a,0.1.0-dev29,0.1.0-dev30,0.1.0-dev30a,0.1.0-dev30b,0.1.0-dev31,0.1.0-dev32,0.1.0-dev32a,0.1.0-dev32b,0.1.0-dev32d,0.1.0-dev32e,0.1.0-dev32f,0.1.0-dev32g,0.1.0-dev32h,0.1.0-dev32i,0.1.0-dev32j,0.1.0-dev32k,0.1.0-dev32l,0.1.0-dev32m,0.1.0-dev32n,0.1.0-dev32o,0.1.0-dev32p,0.1.0-dev32q">
+        <require-file name="Sources/BetterPortal.php" destination="$sourcedir" />
+        <require-file name="Themes/default/BetterPortal.template.php" destination="$themedir" />
+        <require-file name="Themes/default/BetterPortalAdmin.template.php" destination="$themedir" />
+        <require-file name="Themes/default/languages/BetterPortal.english.php" destination="$languagedir" />
+        <require-file name="Themes/default/css/better_portal.css" destination="$themedir/css" />
+        <require-file name="Themes/default/images/better_portal_dev32g.png" destination="$themes_dir/default/images" />
+        <require-file name="Themes/default/images/better_portal_dev32l.png" destination="$themes_dir/default/images" />
+        <require-file name="Themes/default/images/admin/better_portal_dev32g.png" destination="$themes_dir/default/images/admin" />
+        <require-file name="Themes/default/images/admin/big/better_portal_dev32g.png" destination="$themes_dir/default/images/admin/big" />
+        <database>better_portal_database.php</database>
+        <code>better_portal_install.php</code>
+    </upgrade>
+
+    <uninstall for="2.1 - 2.1.99">
+        <code>better_portal_uninstall_hooks.php</code>
+        <database>better_portal_uninstall_data.php</database>
+        <remove-file name="$sourcedir/BetterPortal.php" />
+        <remove-file name="$themedir/BetterPortal.template.php" />
+        <remove-file name="$themedir/BetterPortalAdmin.template.php" />
+        <remove-file name="$languagedir/BetterPortal.english.php" />
+        <remove-file name="$themedir/css/better_portal.css" />
+        <remove-file name="$themes_dir/default/images/better_portal_dev32g.png" />
+        <remove-file name="$themes_dir/default/images/better_portal_dev32l.png" />
+        <remove-file name="$themes_dir/default/images/admin/better_portal_dev32g.png" />
+        <remove-file name="$themes_dir/default/images/admin/big/better_portal_dev32g.png" />
+        <remove-file name="$themes_dir/default/images/better_portal_menu.png" />
+        <remove-file name="$themes_dir/default/images/admin/better_portal.png" />
+        <remove-file name="$themes_dir/default/images/admin/big/better_portal.png" />
+    </uninstall>
+</package-info>

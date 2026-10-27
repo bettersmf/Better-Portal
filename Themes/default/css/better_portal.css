@@ -1,0 +1,1193 @@
+/* Better Portal 0.1.0-dev30 */
+.betterportal {
+    margin-top: 12px;
+    margin-bottom: 1em;
+}
+.betterportal-row {
+    display: grid;
+    gap: 1em;
+    margin: 0 0 1em;
+    align-items: start;
+}
+.betterportal-layout-1 { grid-template-columns: minmax(0, 1fr); }
+.betterportal-layout-1_1 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.betterportal-layout-2_1 { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+.betterportal-layout-1_2 { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+.betterportal-layout-1_1_1 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.betterportal-column {
+    min-width: 0;
+}
+.betterportal-block {
+    margin: 0 0 1em;
+}
+.betterportal-block:last-child {
+    margin-bottom: 0;
+}
+.betterportal-block-header {
+    margin-bottom: 0;
+}
+.betterportal-block-header + .betterportal-block-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.betterportal-block-body > :first-child { margin-top: 0; }
+.betterportal-block-body > :last-child { margin-bottom: 0; }
+
+/* Admin-side usability polish. */
+.betterportal-admin-card {
+    margin-top: 1em;
+}
+.betterportal-admin-card .windowbg {
+    padding: 1em;
+}
+.betterportal-create-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr);
+    gap: 1em;
+    max-width: 850px;
+}
+.betterportal-create-grid label {
+    display: block;
+    font-weight: 600;
+}
+.betterportal-create-grid input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: .35em;
+}
+.betterportal-help {
+    display: block;
+    margin-top: .3em;
+    font-size: .9em;
+    opacity: .8;
+    font-weight: normal;
+}
+.betterportal-builder-steps {
+    margin: 0 0 1em;
+    padding: .85em 1em;
+}
+.betterportal-builder-steps strong {
+    margin-right: .35em;
+}
+@media (max-width: 720px) {
+    .betterportal-row { grid-template-columns: minmax(0, 1fr); }
+    .betterportal-create-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+
+/* dev3: page-wide column builder. */
+.betterportal-admin-columns {
+    display: grid;
+    gap: 1em;
+    align-items: start;
+}
+.betterportal-admin-layout-1 { grid-template-columns: minmax(0, 1fr); }
+.betterportal-admin-layout-1_1 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.betterportal-admin-layout-2_1 { grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); }
+.betterportal-admin-layout-1_2 { grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr); }
+.betterportal-admin-layout-1_1_1 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.betterportal-admin-column {
+    min-width: 0;
+    padding: .8em;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 5px;
+}
+.betterportal-admin-column > h4 { margin: 0 0 .75em; }
+.betterportal-block-editor {
+    padding: .8em 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.betterportal-block-editor:first-of-type { border-top: 0; }
+.betterportal-block-editor textarea { width: 100%; box-sizing: border-box; }
+.betterportal-add-block { margin-top: .75em; }
+.betterportal-empty-column { opacity: .75; }
+@media (max-width: 900px) {
+    .betterportal-admin-columns { grid-template-columns: minmax(0, 1fr); }
+}
+
+
+/* dev3b: builder action alignment. */
+.betterportal-admin-column {
+    display: flex;
+    flex-direction: column;
+}
+.betterportal-add-block {
+    margin-top: 0;
+    padding-top: .8em;
+}
+.betterportal-block-editor + .betterportal-add-block {
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.betterportal-add-block .button {
+    vertical-align: middle;
+}
+
+/* dev4: compact builder + preset block picker. */
+.betterportal-admin-column {
+    padding: .65em;
+}
+.betterportal-admin-column > h4 {
+    margin: 0 0 .45em;
+}
+.betterportal-add-block {
+    display: flex;
+    gap: .4em;
+    align-items: center;
+    margin: 0 0 .55em;
+    padding: 0 0 .55em;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.betterportal-add-block select {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.betterportal-add-block .button {
+    flex: 0 0 auto;
+    margin: 0;
+}
+.betterportal-block-editor {
+    padding: .55em 0;
+}
+.betterportal-block-editor-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: .5em;
+    align-items: baseline;
+    margin-bottom: .25em;
+}
+.betterportal-block-editor dl.settings {
+    margin-bottom: .35em;
+}
+.betterportal-block-editor textarea {
+    min-height: 7.5em;
+}
+.betterportal-block-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: .25em;
+    align-items: center;
+}
+.betterportal-block-actions .button {
+    margin: 0;
+}
+.betterportal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.betterportal-list li {
+    padding: .38em 0;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.betterportal-list li:last-child { border-bottom: 0; }
+.betterportal-list .smalltext {
+    display: block;
+    margin-top: .1em;
+}
+.betterportal-online-summary { margin: 0 0 .4em; }
+.betterportal-online-users { line-height: 1.6; }
+.betterportal-stats {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: .3em .8em;
+    margin: 0;
+}
+.betterportal-stats dt, .betterportal-stats dd { margin: 0; }
+.betterportal-stats dd { text-align: right; }
+
+
+/* dev5: public columns are layout-only; every block is its own SMF header/body panel. */
+
+
+/* dev6: small separation from the forum navigation + additional preset blocks. */
+.betterportal-welcome-name {
+    margin: 0 0 .45em;
+    font-weight: 600;
+}
+.betterportal-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35em .65em;
+}
+.betterportal-search-form {
+    display: flex;
+    gap: .4em;
+    align-items: center;
+}
+.betterportal-search-form input[type="text"] {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.betterportal-top-posters {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.betterportal-top-posters li {
+    display: flex;
+    justify-content: space-between;
+    gap: .75em;
+    padding: .32em 0;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.betterportal-top-posters li:last-child { border-bottom: 0; }
+
+
+/* dev7: compact Better SMF integration blocks. */
+.betterportal-media-list li,
+.betterportal-album-list li {
+    display: flex;
+    gap: .65em;
+    align-items: center;
+}
+.betterportal-media-list li > div,
+.betterportal-album-list li > div {
+    min-width: 0;
+}
+.betterportal-media-thumb {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 44px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: rgba(0,0,0,.06);
+}
+.betterportal-media-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.betterportal-chat-staff {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.betterportal-chat-staff li {
+    display: flex;
+    align-items: center;
+    gap: .45em;
+    padding: .3em 0;
+}
+.betterportal-online-dot {
+    width: .62em;
+    height: .62em;
+    border-radius: 50%;
+    background: #3aa655;
+    box-shadow: 0 0 0 2px rgba(58,166,85,.14);
+}
+
+
+/* dev8: optional per-block preset settings. */
+.betterportal-small-number {
+    width: 5.5em;
+}
+.betterportal-media-list.compact li,
+.betterportal-album-list.compact li {
+    padding-top: .24em;
+    padding-bottom: .24em;
+    gap: .5em;
+}
+.betterportal-media-list.compact .betterportal-media-thumb,
+.betterportal-album-list.compact .betterportal-media-thumb {
+    flex-basis: 44px;
+    width: 44px;
+    height: 34px;
+}
+
+
+/* dev9: multi-page builder navigation and optional page heading. */
+.betterportal-page-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .55em;
+    margin: 0 0 1em;
+    padding: .75em 1em;
+}
+.betterportal-page-switcher select {
+    min-width: 220px;
+    max-width: 100%;
+}
+.betterportal-create-grid select {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: .35em;
+}
+.betterportal-page-header {
+    margin: 0 0 1em;
+}
+
+
+/* dev10: per-page column width presets. */
+.betterportal-layout-1_1.betterportal-width-equal,
+.betterportal-layout-2_1.betterportal-width-equal,
+.betterportal-layout-1_2.betterportal-width-equal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.betterportal-layout-1_1.betterportal-width-wide-left,
+.betterportal-layout-2_1.betterportal-width-wide-left,
+.betterportal-layout-1_2.betterportal-width-wide-left {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
+.betterportal-layout-1_1.betterportal-width-wide-right,
+.betterportal-layout-2_1.betterportal-width-wide-right,
+.betterportal-layout-1_2.betterportal-width-wide-right {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+.betterportal-layout-1_1_1.betterportal-width-equal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.betterportal-layout-1_1_1.betterportal-width-wide-left {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+.betterportal-layout-1_1_1.betterportal-width-wide-center {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+}
+.betterportal-layout-1_1_1.betterportal-width-wide-right {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
+}
+
+.betterportal-admin-layout-1_1.betterportal-width-equal,
+.betterportal-admin-layout-2_1.betterportal-width-equal,
+.betterportal-admin-layout-1_2.betterportal-width-equal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.betterportal-admin-layout-1_1.betterportal-width-wide-left,
+.betterportal-admin-layout-2_1.betterportal-width-wide-left,
+.betterportal-admin-layout-1_2.betterportal-width-wide-left {
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+}
+.betterportal-admin-layout-1_1.betterportal-width-wide-right,
+.betterportal-admin-layout-2_1.betterportal-width-wide-right,
+.betterportal-admin-layout-1_2.betterportal-width-wide-right {
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+}
+.betterportal-admin-layout-1_1_1.betterportal-width-equal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.betterportal-admin-layout-1_1_1.betterportal-width-wide-left {
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr) minmax(220px, 1fr);
+}
+.betterportal-admin-layout-1_1_1.betterportal-width-wide-center {
+    grid-template-columns: minmax(220px, 1fr) minmax(0, 3fr) minmax(220px, 1fr);
+}
+.betterportal-admin-layout-1_1_1.betterportal-width-wide-right {
+    grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr) minmax(0, 2fr);
+}
+.betterportal-width-preview {
+    display: block;
+    margin-top: .3em;
+    opacity: .8;
+}
+
+@media (max-width: 900px) {
+    .betterportal-admin-columns {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
+@media (max-width: 720px) {
+    .betterportal-row {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
+
+
+/* dev12: embedded native forum mode. */
+.betterportal-embedded-forum,
+.betterportal-embedded-forum #boardindex_table {
+    min-width: 0;
+}
+.betterportal-embedded-forum .main_container:first-child {
+    margin-top: 0;
+}
+.betterportal-forum-placeholder {
+    padding: 1em;
+    border: 1px dashed rgba(0,0,0,.22);
+    border-radius: 5px;
+    text-align: center;
+}
+.betterportal-forum-placeholder strong,
+.betterportal-forum-placeholder span {
+    display: block;
+}
+.betterportal-forum-placeholder span {
+    margin-top: .35em;
+}
+.betterportal-forum-inactive-block {
+    opacity: .7;
+}
+.betterportal-forum-inactive-note {
+    margin: .2em 0 .5em;
+    padding: .45em .6em;
+    border-left: 3px solid rgba(0,0,0,.25);
+}
+
+/* dev12: Forum Mode compatibility guidance. */
+.betterportal-forum-width-notice { margin: 1em 0; }
+
+
+/* dev14: native board views can reuse the Forum Mode page as a site-wide shell. */
+.betterportal-forum-main > .betterportal-embedded-forum {
+    min-width: 0;
+}
+.betterportal-forum-main #messageindex,
+.betterportal-forum-main .boardindex_table,
+.betterportal-forum-main .main_container {
+    min-width: 0;
+}
+
+
+/* dev14a: remove the native MessageIndex top offset when it is rendered inside Board Shell.
+   This is deliberately scoped to the Portal board shell so normal SMF board pages keep
+   their theme-defined spacing. */
+.betterportal-shell-board .betterportal-forum-main .betterportal-embedded-forum > #display_head {
+    margin-top: 0 !important;
+}
+
+
+/* dev14c: target the actual native MessageIndex board-title panel.
+   In SMF 2.1, #display_head is a direct child of the embedded template output
+   and appears BEFORE #messageindex; it is not inside #messageindex. The active
+   theme's .information rule removes the top border and rounds only the bottom
+   corners, so restore the missing top edge and complete the radius here. */
+.betterportal-shell-board .betterportal-forum-main .betterportal-embedded-forum > #display_head.information {
+    border-top: 1px solid #ddd !important;
+    border-radius: 7px !important;
+}
+
+/* dev15: native topic Display can reuse the Forum Mode page shell.
+   Keep only intrinsic-width constraints here; visual spacing stays native until
+   real topic-shell testing shows a theme-specific issue. */
+.betterportal-shell-topic .betterportal-forum-main,
+.betterportal-shell-topic .betterportal-embedded-forum,
+.betterportal-shell-topic .betterportal-embedded-forum #forumposts {
+    min-width: 0;
+}
+
+/* dev16: finish the native Display topic-title panel inside Topic Shell.
+   Display.template.php renders #display_head.information as a direct child of
+   the embedded topic output, just like MessageIndex does for the board title.
+   The base SMF .information rule removes its top border and rounds only the
+   lower corners, so restore a complete outer panel only inside Topic Shell. */
+.betterportal-shell-topic .betterportal-forum-main .betterportal-embedded-forum > #display_head.information {
+    border-top: 1px solid var(--tl-border, #ddd) !important;
+    border-radius: 7px !important;
+}
+
+/* dev17: drag-and-drop block ordering in Page Builder. */
+.betterportal-block-list {
+    min-height: 2.25em;
+}
+.betterportal-drag-handle {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7em;
+    height: 1.7em;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    cursor: grab;
+    user-select: none;
+    line-height: 1;
+    font-size: 1.05em;
+    opacity: .75;
+}
+.betterportal-drag-handle:hover,
+.betterportal-drag-handle:focus {
+    opacity: 1;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.08);
+}
+.betterportal-drag-handle:active {
+    cursor: grabbing;
+}
+.betterportal-block-editor.betterportal-is-dragging {
+    opacity: .35;
+}
+.betterportal-drop-placeholder {
+    min-height: 3.25em;
+    margin: .35em 0;
+    border: 2px dashed rgba(0,0,0,.22);
+    border-radius: 5px;
+    background: rgba(0,0,0,.025);
+}
+.betterportal-sort-status {
+    min-height: 1.4em;
+    margin-top: .55em;
+    text-align: right;
+    opacity: .8;
+}
+.betterportal-block-editor-heading > strong {
+    flex: 1 1 auto;
+}
+
+
+/* dev18: audience-aware page controls. */
+.betterportal-audience-groups {
+    margin-top: 0.6em;
+    padding: 0.65em 0.75em;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+}
+.betterportal-audience-group {
+    display: inline-block;
+    margin: 0.25em 0.8em 0.25em 0;
+    white-space: nowrap;
+}
+
+
+/* dev20: Dynamic Forum Board block. */
+.betterportal-dynamic-board-summary {
+    display: flex;
+    gap: .75em;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: .55em;
+}
+.betterportal-dynamic-board-name {
+    font-weight: 700;
+}
+.betterportal-dynamic-board-description {
+    margin: 0 0 .75em;
+    opacity: .9;
+}
+.betterportal-dynamic-board-table {
+    border-top: 1px solid rgba(0,0,0,.10);
+}
+.betterportal-dynamic-board-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(8.5em, auto);
+    gap: .8em;
+    align-items: center;
+    padding: .65em 0;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.betterportal-dynamic-board-topic {
+    min-width: 0;
+}
+.betterportal-dynamic-board-topic > a {
+    font-weight: 600;
+}
+.betterportal-dynamic-board-topic .smalltext {
+    display: block;
+    margin-top: .15em;
+}
+.betterportal-dynamic-board-stats,
+.betterportal-dynamic-board-last {
+    white-space: nowrap;
+    text-align: right;
+}
+.betterportal-topic-flag {
+    display: inline-block;
+    margin-right: .3em;
+}
+.betterportal-dynamic-board-footer {
+    margin-top: .65em;
+    text-align: right;
+    font-size: .92em;
+}
+@media (max-width: 700px) {
+    .betterportal-dynamic-board-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: .2em;
+    }
+    .betterportal-dynamic-board-stats,
+    .betterportal-dynamic-board-last {
+        text-align: left;
+        white-space: normal;
+    }
+}
+
+/* dev21: interactive dynamic boards + theme-independent admin action spacing. */
+.betterportal-page-switcher,
+.betterportal-page-actions,
+.betterportal-block-actions,
+.betterportal-row-actions,
+.betterportal-table-actions,
+.betterportal-dynamic-board-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .45em;
+}
+.betterportal-page-switcher .button,
+.betterportal-page-actions .button,
+.betterportal-block-actions .button,
+.betterportal-row-actions .button,
+.betterportal-table-actions .button,
+.betterportal-dynamic-board-actions .button {
+    margin: 0;
+}
+.betterportal-dynamic-board-actions {
+    justify-content: flex-end;
+    margin: .55em 0 .75em;
+}
+.betterportal-dynamic-board-compact .betterportal-dynamic-board-summary {
+    margin-bottom: .2em;
+}
+.betterportal-dynamic-board-compact .betterportal-dynamic-board-summary > .smalltext {
+    display: none;
+}
+.betterportal-dynamic-board-compact .betterportal-list li {
+    padding: .25em 0;
+}
+.betterportal-dynamic-board-compact .betterportal-list li > a {
+    font-weight: 600;
+}
+.betterportal-dynamic-board-compact .betterportal-list .smalltext {
+    margin-top: .05em;
+    font-size: .86em;
+    opacity: .8;
+}
+.betterportal-dynamic-board-interactive .betterportal-dynamic-board-row {
+    padding: .7em 0;
+}
+.betterportal-dynamic-board-reply {
+    display: inline-block;
+    margin-left: .55em;
+    font-size: .88em;
+    white-space: nowrap;
+}
+.betterportal-table-actions form {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .45em;
+    margin: 0;
+}
+.betterportal-table-actions form .button {
+    margin: 0;
+}
+
+
+/* dev22: true in-block native forum/composer shell + hard-scoped action spacing. */
+.betterportal-action-group,
+.betterportal-page-switcher,
+.betterportal-page-actions,
+.betterportal-block-actions,
+.betterportal-row-actions,
+.betterportal-table-actions,
+.betterportal-add-block,
+.betterportal-dynamic-board-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: .55em !important;
+}
+.betterportal-action-group > .button,
+.betterportal-page-switcher > .button,
+.betterportal-page-actions > .button,
+.betterportal-block-actions > .button,
+.betterportal-row-actions > .button,
+.betterportal-table-actions .button,
+.betterportal-add-block > .button,
+.betterportal-dynamic-board-actions > .button {
+    margin: 0 !important;
+}
+.betterportal-page-settings-actions {
+    justify-content: flex-end;
+    margin-top: .75em;
+}
+.betterportal-native-block-body {
+    padding: 0;
+    overflow: visible;
+}
+.betterportal-native-block-body > .main_section,
+.betterportal-native-block-body > #messageindex,
+.betterportal-native-block-body > #display_head,
+.betterportal-native-block-body > form {
+    margin-top: 0;
+}
+.betterportal-block-native-shell .betterportal-block-header + .betterportal-native-block-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+/* dev24c: make the native-view return navigation part of the header layout itself.
+   A grid is used instead of absolute positioning so theme-specific sizing/float
+   rules cannot shrink the positioning containing block. */
+.betterportal-block-header-inner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    width: 100% !important;
+    min-width: 0;
+    box-sizing: border-box;
+}
+.betterportal-block-header-inner > .catbg {
+    grid-column: 1;
+    min-width: 0;
+    width: auto !important;
+    margin: 0 !important;
+    padding-right: .6em !important;
+}
+.betterportal-block-return {
+    grid-column: 2;
+    justify-self: end;
+    align-self: center;
+    position: static !important;
+    float: none !important;
+    transform: none !important;
+    display: inline-flex;
+    align-items: center;
+    max-width: 22em;
+    margin: 0 .65em 0 .5em !important;
+    padding: .22em .55em;
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .14);
+    color: #fff !important;
+    font-size: .88em;
+    font-weight: 600;
+    line-height: 1.25;
+    text-decoration: none !important;
+    text-shadow: none;
+    box-shadow: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.betterportal-block-return:hover,
+.betterportal-block-return:focus {
+    background: rgba(255, 255, 255, .16);
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.betterportal-block-return-fallback {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 .75em;
+}
+.betterportal-block-return-fallback .betterportal-block-return {
+    display: inline-flex;
+    max-width: 100%;
+    margin: 0 !important;
+    color: inherit !important;
+    background: none;
+    border: 0;
+    padding: 0;
+}
+@media (max-width: 600px) {
+    .betterportal-block-header-inner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .betterportal-block-header-inner > .catbg {
+        grid-column: 1;
+        padding-right: 12px !important;
+    }
+    .betterportal-block-return {
+        grid-column: 1;
+        justify-self: start;
+        margin: 0 8px 7px !important;
+        max-width: calc(100% - 16px);
+    }
+}
+
+
+/* dev25 interactive poll block */
+.betterportal-poll-question {
+    font-weight: 700;
+    font-size: 1.08em;
+    margin-bottom: 4px;
+}
+.betterportal-poll-source {
+    margin-bottom: 12px;
+}
+.betterportal-poll-form,
+.betterportal-poll-results {
+    display: grid;
+    gap: 9px;
+}
+.betterportal-poll-choice {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.betterportal-poll-choice input {
+    margin-top: 3px;
+}
+.betterportal-poll-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+.betterportal-poll-result {
+    display: grid;
+    gap: 4px;
+}
+.betterportal-poll-result-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.betterportal-poll-result-voted .betterportal-poll-result-label {
+    font-weight: 700;
+}
+.betterportal-poll-bar {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(0,0,0,.08);
+    overflow: hidden;
+}
+.betterportal-poll-bar > span {
+    display: block;
+    min-width: 2px;
+    height: 100%;
+    background: currentColor;
+    opacity: .35;
+}
+.betterportal-poll-total,
+.betterportal-poll-status {
+    margin-top: 6px;
+}
+
+
+/* dev26 Dynamic Topic fallback preview. The active native Topic block replaces
+   this preview with SMF's full Display template; this styling is only used when
+   another native interactive block already owns the current Portal request. */
+.betterportal-topic-preview {
+    display: grid;
+    gap: 8px;
+}
+.betterportal-topic-preview-title {
+    font-size: 1.08em;
+    font-weight: 700;
+}
+.betterportal-topic-preview-body {
+    max-height: 18em;
+    overflow: hidden;
+}
+.betterportal-topic-preview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55em;
+}
+.betterportal-topic-preview-actions > .button {
+    margin: 0 !important;
+}
+
+/* dev28 Interactive Better Gallery browser. */
+.betterportal-media-browser {
+    display: grid;
+    gap: 12px;
+}
+.betterportal-media-browser-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.betterportal-media-browser-head > div {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+.betterportal-media-browser-head > .button {
+    margin: 0 !important;
+}
+.betterportal-media-browser-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+}
+.betterportal-media-browser-card {
+    display: grid;
+    grid-template-rows: minmax(88px, 1fr) auto;
+    gap: 6px;
+    min-width: 0;
+    text-decoration: none;
+}
+.betterportal-media-browser-card img,
+.betterportal-media-browser-placeholder {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 5px;
+    background: rgba(0,0,0,.06);
+}
+.betterportal-media-browser-placeholder {
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+.betterportal-media-browser-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.betterportal-media-browser.is-compact .betterportal-media-browser-grid {
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 8px;
+}
+.betterportal-media-browser.is-compact .betterportal-media-browser-card {
+    grid-template-rows: 64px auto;
+}
+.betterportal-media-browser.is-compact .betterportal-media-browser-card img,
+.betterportal-media-browser.is-compact .betterportal-media-browser-placeholder {
+    height: 64px;
+}
+.betterportal-media-browser.is-compact .betterportal-media-browser-title {
+    font-size: .9em;
+}
+.betterportal-media-browser-hint {
+    margin: 0;
+    opacity: .8;
+}
+@media (max-width: 720px) {
+    .betterportal-media-browser-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* dev29: mixed-layout page rows. */
+.betterportal-add-row {
+    display: flex;
+    align-items: center;
+    gap: .55em;
+    margin: 0 0 1em;
+}
+.betterportal-add-row .button { margin: 0 !important; }
+.betterportal-rows-builder {
+    display: grid;
+    gap: 1em;
+}
+.betterportal-admin-row {
+    border: 1px solid rgba(0,0,0,.14);
+    border-radius: 6px;
+    padding: .8em;
+    min-width: 0;
+    background: rgba(255,255,255,.02);
+}
+.betterportal-row-toolbar {
+    display: flex;
+    align-items: center;
+    gap: .55em;
+    margin: 0 0 .65em;
+}
+.betterportal-row-toolbar .smalltext { margin-left: auto; }
+.betterportal-row-drag-handle,
+.betterportal-drag-handle {
+    cursor: grab;
+    user-select: none;
+}
+.betterportal-row-drag-handle:active,
+.betterportal-drag-handle:active { cursor: grabbing; }
+.betterportal-row-settings {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .55em 1em;
+    padding: .65em;
+    margin: 0 0 .8em;
+    border-radius: 5px;
+    background: rgba(0,0,0,.035);
+}
+.betterportal-row-settings label {
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+}
+.betterportal-row-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .4em;
+    margin-left: auto;
+}
+.betterportal-row-actions .button { margin: 0 !important; }
+.betterportal-admin-row .betterportal-admin-columns { margin-top: .2em; }
+.betterportal-row-drop-placeholder {
+    min-height: 54px;
+    border: 2px dashed rgba(0,0,0,.25);
+    border-radius: 6px;
+    background: rgba(0,0,0,.03);
+}
+.betterportal-row-is-dragging { opacity: .45; }
+@media (max-width: 900px) {
+    .betterportal-row-settings { align-items: stretch; }
+    .betterportal-row-settings label { width: 100%; justify-content: space-between; }
+    .betterportal-row-actions { margin-left: 0; width: 100%; }
+}
+
+/* dev30: Better Downloads provider blocks. */
+/* dev32q: Better Downloads provider blocks inherit the active theme. */
+.betterportal-download-list{display:grid;gap:10px}.betterportal-download-card{display:flex;gap:12px;align-items:flex-start;padding:10px;border:1px solid var(--tl-border,rgba(0,0,0,.12));border-radius:6px;background:var(--tl-surface,transparent);color:var(--tl-text,inherit)}
+.betterportal-download-card.featured{padding:14px}.betterportal-download-cover{flex:0 0 88px}.betterportal-download-cover img{display:block;width:88px;height:64px;object-fit:cover;border-radius:5px;border:1px solid var(--tl-border,rgba(0,0,0,.12));background:var(--tl-surface-alt,transparent)}
+.betterportal-download-card.featured .betterportal-download-cover{flex-basis:150px}.betterportal-download-card.featured .betterportal-download-cover img{width:150px;height:105px}.betterportal-download-card.stacked{flex-direction:column}.betterportal-download-card.stacked .betterportal-download-cover{flex:0 0 auto;width:100%}.betterportal-download-card.stacked .betterportal-download-cover img{width:100%;height:auto;max-height:220px;object-fit:cover}.betterportal-download-card.stacked .betterportal-download-copy{width:100%}.betterportal-download-copy{min-width:0;flex:1}.betterportal-download-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:700}.betterportal-download-badge{font-size:.82em;padding:1px 7px;border:1px solid var(--tl-border,rgba(0,0,0,.18));border-radius:999px;font-weight:400;background:var(--tl-surface-alt,transparent);color:var(--tl-muted-text,inherit)}.betterportal-download-meta{margin-top:3px;color:var(--tl-muted-text,inherit)}.betterportal-download-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.betterportal-download-actions .button{margin:0!important}
+.betterportal-download-categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.betterportal-download-categories>a{display:flex;flex-direction:column;gap:4px;padding:11px;border:1px solid var(--tl-border,rgba(0,0,0,.14));border-radius:6px;background:var(--tl-surface,transparent);color:var(--tl-link,inherit);text-decoration:none}.betterportal-download-categories span,.betterportal-download-categories small{font-weight:400}.betterportal-download-categories small{color:var(--tl-muted-text,inherit)}
+.betterportal-download-filter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.betterportal-download-filter button{border:1px solid var(--tl-border,rgba(0,0,0,.18));border-radius:999px;padding:5px 10px;background:var(--tl-surface,transparent);color:var(--tl-text,inherit);cursor:pointer}.betterportal-download-filter button.active{font-weight:700;background:var(--tl-surface-alt,rgba(0,0,0,.08))}.betterportal-download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}.betterportal-download-grid .betterportal-download-card{height:100%;box-sizing:border-box}.betterportal-download-grid.stacked{grid-template-columns:1fr}
+@media(max-width:700px){.betterportal-download-card{flex-direction:column}.betterportal-download-cover,.betterportal-download-card.featured .betterportal-download-cover{flex-basis:auto}.betterportal-download-cover img,.betterportal-download-card.featured .betterportal-download-cover img{width:100%;height:auto;max-height:220px}.betterportal-download-grid{grid-template-columns:1fr}}
+
+
+/* dev31: completed Interactive Better Downloads Browser. */
+.betterportal-download-back{margin:0!important;white-space:nowrap}
+.betterportal-download-detail-layout{display:grid;grid-template-columns:minmax(220px,38%) minmax(0,1fr);gap:18px;align-items:start}
+.betterportal-download-gallery{min-width:0}
+.betterportal-download-hero{border:1px solid var(--tl-border,rgba(0,0,0,.13));border-radius:7px;overflow:hidden;background:var(--tl-surface-alt,transparent)}
+.betterportal-download-hero img{display:block;width:100%;height:auto;max-height:430px;object-fit:contain}
+.betterportal-download-thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:7px;margin-top:8px}
+.betterportal-download-thumbs button{padding:2px;border:1px solid var(--tl-border,rgba(0,0,0,.16));border-radius:5px;background:var(--tl-surface,transparent);color:var(--tl-text,inherit);cursor:pointer;min-width:0}
+.betterportal-download-thumbs img{display:block;width:100%;height:52px;object-fit:cover;border-radius:3px}
+.betterportal-download-detail-copy{min-width:0}
+.betterportal-download-detail-heading{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.betterportal-download-detail-heading h3{margin:0;font-size:1.2em}
+.betterportal-download-description{margin-top:12px;line-height:1.55}
+.betterportal-download-section{margin-top:14px;padding-top:12px;border-top:1px solid var(--tl-border,rgba(0,0,0,.1));line-height:1.5}
+.betterportal-download-section>strong{display:block;margin-bottom:5px}
+.betterportal-download-browser-upgrade{margin:10px 0 0;opacity:.78}
+.betterportal-download-browser [data-bpdl-detail][hidden],.betterportal-download-back[hidden]{display:none!important}
+@media(max-width:700px){.betterportal-download-detail-layout{grid-template-columns:1fr}.betterportal-download-hero img{max-height:320px}}
+
+/* dev32: finished interactive Downloads Browser + in-block submission. */
+.betterportal-download-browser{min-width:0}
+.betterportal-download-browser .betterportal-download-filter{align-items:center;gap:4px;padding:6px;margin:0 0 12px;border:1px solid var(--tl-border,rgba(0,0,0,.10));border-radius:8px;background:var(--tl-surface-alt,transparent)}
+.betterportal-download-browser .betterportal-download-filter button{min-height:30px;padding:4px 11px;border:0;border-radius:6px;background:transparent;box-shadow:none;font-size:.92em}
+.betterportal-download-browser .betterportal-download-filter button.active{background:var(--tl-primary,rgba(0,0,0,.09));color:var(--tl-button-primary-text,#fff);font-weight:700}
+.betterportal-download-browser .betterportal-download-grid{gap:12px}
+.betterportal-download-browser .betterportal-download-card{padding:12px;border-color:var(--tl-border,rgba(0,0,0,.10));background:var(--tl-surface,transparent);color:var(--tl-text,inherit)}
+.betterportal-download-browser .betterportal-download-cover{flex-basis:105px}
+.betterportal-download-browser .betterportal-download-cover img{width:105px;height:74px}
+.betterportal-download-browser .betterportal-download-heading{font-size:1.05em}
+.betterportal-download-browser .betterportal-download-meta{opacity:.82;line-height:1.4}
+.betterportal-download-browser .betterportal-download-actions{margin-top:10px}
+.betterportal-download-browser.narrow .betterportal-download-cover,.betterportal-download-browser.narrow .betterportal-download-cover img{width:100%;height:auto}
+.betterportal-download-empty{padding:18px;text-align:center;border:1px dashed var(--tl-border,rgba(0,0,0,.18));border-radius:7px;background:var(--tl-surface,transparent);color:var(--tl-muted-text,inherit);opacity:.9}
+.betterportal-download-add,.betterportal-download-back{margin:0 0 0 6px!important;white-space:nowrap}
+.betterportal-download-submit{min-width:0}
+.betterportal-download-submit-intro{display:flex;flex-direction:column;gap:3px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--tl-border,rgba(0,0,0,.10))}
+.betterportal-download-submit-intro strong{font-size:1.08em}.betterportal-download-submit-intro span{opacity:.78}
+.betterportal-download-submit-result{margin:0 0 12px;padding:10px 12px;border:1px solid var(--tl-border,rgba(0,0,0,.12));border-radius:6px;background:var(--tl-surface-alt,transparent);color:var(--tl-text,inherit)}
+.betterportal-download-submit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.betterportal-download-submit-grid label{display:flex;flex-direction:column;gap:5px;min-width:0;font-weight:600}
+.betterportal-download-submit-grid label.wide,.betterportal-download-submit-section.wide{grid-column:1/-1}
+.betterportal-download-submit-grid input[type=text],.betterportal-download-submit-grid input[type=url],.betterportal-download-submit-grid select,.betterportal-download-submit-grid textarea{box-sizing:border-box;width:100%;max-width:none;font-weight:400}
+.betterportal-download-submit-grid textarea{resize:vertical;min-height:76px}
+.betterportal-download-submit-grid small{font-weight:400;opacity:.74}
+.betterportal-download-submit-section{padding:12px;border:1px solid var(--tl-border,rgba(0,0,0,.10));border-radius:7px;background:var(--tl-surface-alt,transparent);color:var(--tl-text,inherit)}
+.betterportal-download-submit-section>strong{display:block;margin-bottom:10px}
+.betterportal-download-submit-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.betterportal-download-submit-actions .button{margin:0!important}
+@media(max-width:700px){.betterportal-download-submit-grid{grid-template-columns:1fr}.betterportal-download-submit-grid label.wide,.betterportal-download-submit-section.wide{grid-column:auto}.betterportal-download-add,.betterportal-download-back{white-space:normal}}
+
+
+/* dev32b: Downloads Browser contextual actions live inside the block body. */
+.betterportal-block-body-actions{display:flex;justify-content:flex-end;align-items:center;gap:6px;margin:0 0 8px;min-height:24px}
+.betterportal-download-context-action{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin:0!important;padding:0;border:1px solid rgba(70,110,155,.58);border-radius:50%;background:transparent;color:inherit;font:inherit;font-size:20px;line-height:1;cursor:pointer;opacity:.86;box-shadow:none;transition:background-color .14s ease,border-color .14s ease,opacity .14s ease,box-shadow .14s ease}
+.betterportal-download-context-action:hover,.betterportal-download-context-action:focus{background:rgba(70,110,155,.18);border-color:rgba(70,110,155,.85);opacity:1;outline:none}
+.betterportal-download-context-action:focus-visible{box-shadow:0 0 0 2px rgba(70,110,155,.20)}
+.betterportal-download-context-action:active{background:rgba(70,110,155,.26)}
+.betterportal-download-context-action span{display:block;line-height:1;transform:translateY(-1px)}
+.betterportal-download-back[hidden]{display:none!important}
+@media(max-width:700px){.betterportal-block-body-actions{margin-bottom:7px}.betterportal-download-context-action{width:30px;height:30px}}
+
+
+/* dev32h: child-board header/content join inside Portal Board Shell.
+   SMF MessageIndex renders child boards as:
+   #board_[current]_childboards.boardindex_table.main_container
+     > .cat_bar
+     + .up_contain
+   Theme Lab can give that first .up_contain its normal standalone top spacing,
+   which leaves a white strip below the Sub-Boards header. Remove only that
+   first-row top separation and its upper radii so the cell joins the header
+   like one continuous native panel. */
+.betterportal-shell-board .betterportal-forum-main .betterportal-embedded-forum
+[id^="board_"][id$="_childboards"].boardindex_table.main_container > .cat_bar {
+    margin-bottom: 0 !important;
+}
+
+.betterportal-shell-board .betterportal-forum-main .betterportal-embedded-forum
+[id^="board_"][id$="_childboards"].boardindex_table.main_container > .cat_bar + .up_contain {
+    margin-top: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+
+/* dev32n Selected Better Gallery Album card polish. */
+.betterportal-selected-gallery-album {
+    display: grid;
+    gap: 12px;
+}
+.betterportal-selected-gallery-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+}
+.betterportal-selected-gallery-card {
+    display: block;
+    min-width: 0;
+    padding: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.betterportal-selected-gallery-card img,
+.betterportal-selected-gallery-card .betterportal-media-browser-placeholder {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform .15s ease, opacity .15s ease;
+}
+.betterportal-selected-gallery-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+.betterportal-selected-gallery-card:hover img {
+    transform: scale(1.0125);
+    opacity: .97;
+}
+.betterportal-selected-gallery-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+.betterportal-selected-gallery-actions > .button {
+    margin: 0 !important;
+}
+@media (max-width: 600px) {
+    .betterportal-selected-gallery-card {
+        padding: 7px;
+    }
+    .betterportal-selected-gallery-card img,
+    .betterportal-selected-gallery-card .betterportal-media-browser-placeholder {
+        height: 155px;
+    }
+}
+
+
+/* dev32p: direct Portal page/menu ordering on the Pages admin screen. */
+.betterportal-page-order-heading,
+.betterportal-page-order-cell { width: 7.6em; text-align: center; }
+.betterportal-page-order-cell { white-space: nowrap; }
+.betterportal-page-drag-handle,
+.betterportal-page-pinned {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8em;
+    height: 1.8em;
+    vertical-align: middle;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    line-height: 1;
+}
+.betterportal-page-drag-handle { cursor: grab; user-select: none; opacity: .78; }
+.betterportal-page-drag-handle:hover,
+.betterportal-page-drag-handle:focus { opacity: 1; outline: none; box-shadow: 0 0 0 2px rgba(0,0,0,.08); }
+.betterportal-page-drag-handle:active { cursor: grabbing; }
+.betterportal-page-pinned { opacity: .45; cursor: default; }
+.betterportal-page-arrow-form { display: inline-flex !important; gap: .2em; margin: 0 0 0 .3em !important; vertical-align: middle; }
+.betterportal-page-arrow-form .button { min-width: 2em; padding-left: .45em; padding-right: .45em; margin: 0 !important; }
+.betterportal-page-sort-row.betterportal-page-is-dragging { opacity: .35; }
+.betterportal-page-drop-placeholder td { height: 3.2em; border: 2px dashed rgba(0,0,0,.22); background: rgba(0,0,0,.025); }
